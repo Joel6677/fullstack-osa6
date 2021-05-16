@@ -17,9 +17,9 @@ jobs:
         with:
           node-version: '12.x'
       - name: npm install 
-        run: npm install
+        run: cd redux-anecdotes && npm install
       - name: lint
-        run: cd redux-anecdotes && npm run lint
+        run: npm run lint
       - name: build
         run: npm run build
       - name: test
