@@ -19,7 +19,7 @@ jobs:
       - name: npm install 
         run: npm install && cd redux-anecdotes
       - name: lint
-        run: npm run eslint
+        run: npm run lint
       - name: build
         run: npm run build
       - name: test
