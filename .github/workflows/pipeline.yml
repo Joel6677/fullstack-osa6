@@ -19,14 +19,14 @@ jobs:
       - name: npm install 
         run: cd redux-anecdotes && npm install
       - name: lint
-        run: npm run lint
+        run: cd redux-anecdotes && npm run lint
       - name: build
-        run: npm run build
+        run: cd redux-anecdotes && npm run build
       - name: test
-        run: npm run test
+        run: cd redux-anecdotes && npm run test
       - name: e2e tests
         uses: cypress-io/github-action@v2
         with:
-          command: npm run test:e2e
+          command: cd redux-anecdotes && npm run test:e2e
           start: npm run server
           wait-on: http://localhost:3001
